@@ -7,3 +7,5 @@ for i in range(50):
     ax.bar(y1, label='test', height=y1, width=0.3)
     ax.legend()
     plt.pause(0.5)
+
+# this is a comment
