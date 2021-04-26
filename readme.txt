@@ -4,4 +4,5 @@ Git has a mutable index called stage.
 changes
 New Change Occured
 another one
-this is a confict
+show confict
+
