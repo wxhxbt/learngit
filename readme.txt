@@ -7,3 +7,4 @@ another one
 show confict
 Creating new branch is quick.
 Code update 1
+Code update 2
