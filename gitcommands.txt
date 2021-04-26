@@ -1,0 +1,46 @@
+1. Download (Win for .exe, Linux for git) 
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+2. Create Repo
+git init
+git add readme.txt
+git add file1.txt file2.txt file3.txt
+git commit -m "wrote a readme file"
+
+3. Check the status
+git status
+git diff readme.txt
+
+4. Version control
+git log											Check the commit log
+git log --pretty=oneline
+git reset --hard HEAD^							Back 1 version
+git reset --hard HEAD~100						Back 100 version
+git reset --hard 1094a							Back to future (need same window)
+git reflog										Check all the commands
+
+5. Withdraw change
+git checkout -- readme.txt						Change the file in working directory to the previous version
+git reset HEAD readme.txt						Withdraw after add command
+
+6. Delete file
+git rm test.txt									Delete file in cache
+git checkout -- test.txt						Restore the file
+
+7. Create Remote Repo
+ssh-keygen -t rsa -C "youremail@example.com"	Generate ssh private/public key
+eval `ssh-agent -s`								Start ssh-agent
+ssh-add ~/.ssh/id_rsa							Add to the ssh-agent
+git remote add origin git@github.com:wxhxbt/learngit.git 				Connect to the remote repo
+git push -u origin master						Push the update to remote
+git remote -v 									Check all the remote connection
+git remote rm origin							Delete remote connection
+git clone git@github.com:wxhxbt/learngit.git  	Download the repo in the remote
+
+8. Manage branches
+git checkout -b dev								Create branch and switch, =git branch dev; git checkout dev
+git branch 										Check branches
+git merge dev									Merge the master branch with dev branch
+git branch -d dev								Delete the branches
+git checkout -b dev origin/dev					Connect local dev branch to remote dev branch, git pull to sync
